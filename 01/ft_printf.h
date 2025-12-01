@@ -16,12 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-typedef struct s_format
-{
-	char	param;
-	int		(*func)(va_list);
-}			t_format;
-
 int			ft_putchar(char c);
 int			ft_putstr(char *str);
 int			ft_putnbr(int n);
