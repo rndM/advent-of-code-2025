@@ -2,7 +2,7 @@
 
 Ce dépôt contient mes solutions aux problèmes de l'[Advent of Code 2025](https://adventofcode.com/2025), réalisées dans le cadre de ma formation à l'École 42 Marseille.
 
-## 🗂️ Structure du dépôt
+## Structure du dépôt
 
 Chaque jour contient :
 - Les solutions en C ou en Python (parfois dans un seul fichier `.c` si les parties sont liées ou avec les fonctions utilitaires)
@@ -26,7 +26,7 @@ Voici quelques instructions pour compiler et exécuter les solutions en language
 
 - **Remarques**
 
-  - Pour les jous codés en C, les Makefiles de chaque dossier créent en général un exécutable nommé `dayNN` (ex. `day01`).
+  - Pour les jous codés en C, les Makefiles de chaque dossier créent un exécutable nommé `dayNN` (ex. `day01`).
   - Ajustez le nom de l'exécutable si nécessaire selon le `Makefile` du jour.
 
 ## 📌 Objectifs pédagogiques
@@ -38,8 +38,8 @@ Voici quelques instructions pour compiler et exécuter les solutions en language
 
 ## 📝 Notes
 
-- Les solutions sont personnelles et ne sont pas nécessairement optimisées pour la performance, l'Advent of Code est avant tout une activité ludique.
-- Certains jours pourront inclure des approches alternatives
+- Les solutions sont personnelles et ne sont pas nécessairement optimisées, l'Advent of Code est avant tout une activité ludique.
+- Certains jours pourront inclure des approches alternatives, des essais complémentaire ...
 
 ## 🔗 Liens utiles
 
