@@ -6,11 +6,11 @@ def main():
     print(f"{contenu}")
 
     ranges = contenu.split(',')
-    print(f"\nb de lignes: {len(ranges)}")
+    print(f"\n nb de lignes: {len(ranges)}")
 
     print("\nDetail des lignes:")
     for i, r in enumerate(ranges):
-        print(f"  Range {i+1}: '{r}'")
+        print(f"  ligne {i+1}: '{r}'")
 
 if __name__ == "__main__":
     main()
