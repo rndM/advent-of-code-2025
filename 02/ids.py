@@ -28,7 +28,7 @@ def main():
         start = int(start)
         end = int(end)
 
-        print("Plage:",start," à ", end")
+        print("Plage:", start, " à ", end)
 
         for num in range(start, end + 1):
             if is_invalid(num):

@@ -34,10 +34,6 @@ Chaque jour contient :
   Pour les jours où la solution est en Python :
 
     ```bash
-    # exécuter la solution du jour 02 :
-    python3 02/ids.py
-
-    # ou depuis le dossier du jour
     cd 02
     python3 ids.py
     ```
