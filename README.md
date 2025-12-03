@@ -9,7 +9,7 @@ Chaque jour contient :
 
 ## Compilation et exécution
 
-Voici quelques instructions pour compiler et exécuter les solutions en language C jour par jour en utilisant `make`.
+  ### Instructions en C :
 
 - **Compiler un jour (depuis le dossier du jour)**
 
@@ -29,12 +29,21 @@ Voici quelques instructions pour compiler et exécuter les solutions en language
   - Pour les jous codés en C, les Makefiles de chaque dossier créent un exécutable nommé `dayNN` (ex. `day01`).
   - Ajustez le nom de l'exécutable si nécessaire selon le `Makefile` du jour.
 
-## Objectifs pédagogiques
+  ### Instructions Python
 
-- Pratiquer la résolution de problèmes algorithmiques
-- Approfondir la maîtrise du langage C
-- Développer des habitudes de code propre et optimisé
-- Se préparer aux épreuves techniques de l'École 42
+  Pour les jours où la solution est en Python :
+
+    ```bash
+    # exécuter la solution du jour 02 :
+    python3 02/ids.py
+
+    # ou depuis le dossier du jour
+    cd 02
+    python3 ids.py
+    ```
+
+  - **Notes** :
+    - Les scripts sont exécutables directement si les permissions sont définies.
 
 ## Notes
 

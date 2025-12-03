@@ -1,16 +1,42 @@
+#!/usr/bin/env python3
+
+def is_invalid(num):
+    s = str(num)
+    length = len(s)
+
+    if length % 2 != 0:
+        return False
+
+    mid = length // 2
+    first = s[:mid]
+    second = s[mid:]
+
+    return first == second
+
+
 def main():
 
     with open('input.txt', 'r') as f:
-        contenu = f.read().strip()
+        file = f.read().strip()
 
-    print(f"{contenu}")
+    ids = file.split(',')
 
-    ranges = contenu.split(',')
-    print(f"\n nb de lignes: {len(ranges)}")
+    res = 0
 
-    print("\nDetail des lignes:")
-    for i, r in enumerate(ranges):
-        print(f"  ligne {i+1}: '{r}'")
+    for id in ids:
+        start, end = id.split('-')
+        start = int(start)
+        end = int(end)
+
+        print(f"Plage: {start} à {end}")
+
+        for num in range(start, end + 1):
+            if is_invalid(num):
+                print(f"  {num} est invalide")
+                res += num
+
+    print(f"\nres: {res}")
+
 
 if __name__ == "__main__":
     main()
