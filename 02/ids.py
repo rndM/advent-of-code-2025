@@ -17,7 +17,7 @@ def is_invalid(num):
 def main():
 
     with open('input.txt', 'r') as f:
-        file = f.read().strip()
+        file = f.read()
 
     ids = file.split(',')
 
