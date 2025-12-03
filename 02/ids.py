@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def is_invalid(num):
+def is_invalid_part1(num):
     s = str(num)
     length = len(s)
 
@@ -28,14 +28,14 @@ def main():
         start = int(start)
         end = int(end)
 
-        print("Plage:", start, " à ", end)
+        # print("Plage:", start, " à ", end)
 
         for num in range(start, end + 1):
-            if is_invalid(num):
-                print(num, "est invalide")
+            if is_invalid_part1(num):
+                # print(num, "est invalide")
                 res += num
 
-    print(f"\nres: {res}")
+    print(f"\nPass 1: {res}")
 
 
 if __name__ == "__main__":
