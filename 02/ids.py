@@ -27,7 +27,6 @@ def main():
         start, end = id.split('-')
         start = int(start)
         end = int(end)
-
         # print("Plage:", start, " à ", end)
 
         for num in range(start, end + 1):
