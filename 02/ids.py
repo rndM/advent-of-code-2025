@@ -28,11 +28,11 @@ def main():
         start = int(start)
         end = int(end)
 
-        print(f"Plage: {start} à {end}")
+        print("Plage:",start," à ", end")
 
         for num in range(start, end + 1):
             if is_invalid(num):
-                print(f"  {num} est invalide")
+                print(num, "est invalide")
                 res += num
 
     print(f"\nres: {res}")
