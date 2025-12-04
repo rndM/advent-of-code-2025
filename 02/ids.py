@@ -14,12 +14,20 @@ def is_invalid_part1(num):
     return first == second
 
 
-def main():
+def is_invalid_part2(num):
+    s = str(num)
+    length = len(s)
 
-    with open('input.txt', 'r') as f:
-        file = f.read()
+    for digits in range(1, length // 2 + 1):
+        if length % digits == 0:
+            pattern = s[:digits]
+            rep = length // digits
+            if rep >= 2 and pattern * rep == s:
+                return True
+    return False
 
-    ids = file.split(',')
+
+def solve(part, ids):
 
     res = 0
 
@@ -27,14 +35,24 @@ def main():
         start, end = id.split('-')
         start = int(start)
         end = int(end)
-        # print("Plage:", start, " à ", end)
 
         for num in range(start, end + 1):
-            if is_invalid_part1(num):
-                # print(num, "est invalide")
+            if part == 1 and is_invalid_part1(num):
                 res += num
+            elif part == 2 and is_invalid_part2(num):
+                res += num
+    return res
 
-    print(f"\nPass 1: {res}")
+
+def main():
+
+    with open('input.txt', 'r') as f:
+        file = f.read()
+
+    datas = file.split(',')
+
+    print(f"Pass 1: {solve(1, datas)}")
+    print(f"Pass 2: {solve(2, datas)}")
 
 
 if __name__ == "__main__":
