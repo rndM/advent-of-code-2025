@@ -1,17 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rmouren <rmouren@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 13:10:16 by rmouren           #+#    #+#             */
-/*   Updated: 2025/11/10 19:26:31 by rmouren          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/** convert the initial portion of the string pointed to by nptr to int.
- * Return the converted value or 0 on error. */
 static int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'

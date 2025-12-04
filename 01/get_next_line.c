@@ -1,24 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rmouren <rmouren@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/18 11:53:13 by rmouren           #+#    #+#             */
-/*   Updated: 2025/11/19 23:07:19 by rmouren          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line.h"
 
-/**
- * Verifier les params
- * appeler ft_lst_create pour la lecture et la creation de la ligne
- * Appeler ft_str_create(lst) pour creer la string
- * free !!!
- * Retournee la ligne entiere ou NULL
- */
 char	*get_next_line(int fd)
 {
 	t_list		*lst;
@@ -34,12 +15,6 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/**
- * verifier si il y a deja des donnees dans le buffer
- * Lire le fichier par blocs de BUFFER_SIZE
- * Remplir la liste avec les blocs jusqu'a \n ou EOF
- * Sauvegarde le reste dans le buffer
- */
 int	ft_lst_create(t_list **lst, int fd, char *buffer)
 {
 	ssize_t	car_read;
@@ -64,14 +39,6 @@ int	ft_lst_create(t_list **lst, int fd, char *buffer)
 	return (1);
 }
 
-/**
- * Chercher \n avec ft_buffer_len
- * extrait la portion avec ft_substr
- * si \n ajouter a la liste avec ft_lst_add_node
- * si \n trouvé : deplace le reste
- * 	sinon : vide le buffer
- * retourne si \n trouve
- */
 int	ft_process_buffer(t_list **lst, char *buffer)
 {
 	size_t	len;
@@ -90,13 +57,6 @@ int	ft_process_buffer(t_list **lst, char *buffer)
 	return (has_newline);
 }
 
-/**
- * calculer la longueur totale avec ft_get_line_len
- * malloc total_len + 1
- * copier tous les blocs de la liste dans une string
- * \0
- * retourner la ligne complete
- */
 char	*ft_str_create(t_list *lst)
 {
 	char	*line;
@@ -122,9 +82,6 @@ char	*ft_str_create(t_list *lst)
 	return (line);
 }
 
-/**
- * Deplacer le reste au debut du buffer
- */
 void	ft_move_buffer(char *buffer, size_t start)
 {
 	size_t	i;

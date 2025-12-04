@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# Un numero est invalide si il contient un pattern repete 2 fois
 def is_invalid_part1(num):
     s = str(num)
     length = len(s)
@@ -14,6 +15,7 @@ def is_invalid_part1(num):
     return first == second
 
 
+# Un numero est invalide si il contient un pattern repete au moins 2 fois
 def is_invalid_part2(num):
     s = str(num)
     length = len(s)
