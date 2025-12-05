@@ -4,7 +4,7 @@ def main():
     total_joltage = 0
 
     with open('input.txt', 'r') as f:
-        lines = f.read().strip().split('\n')
+        lines = f.read().split('\n')
 
     for line in lines:
         max_joltage = 0
