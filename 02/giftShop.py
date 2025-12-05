@@ -30,7 +30,6 @@ def is_invalid_part2(num):
 
 
 def solve(part, ids):
-
     res = 0
 
     for id in ids:
