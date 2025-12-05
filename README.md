@@ -31,11 +31,11 @@ Chaque jour contient :
 
   ### Instructions Python
 
-  Pour les jours où la solution est en Python :
+  Exemple pour les jours où la solution est en Python :
 
     ```bash
     cd 02
-    python3 ids.py
+    python3 giftShop.py
     ```
 
   - **Notes** :
