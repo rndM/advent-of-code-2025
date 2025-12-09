@@ -3,8 +3,7 @@
 def max_joltage_k_batteries(line, k):
     """
     Trouve le voltage maximum en sélectionnant exactement k batteries.
-    Utilise une approche gloutonne : à chaque position du résultat,
-    choisir le plus grand chiffre disponible qui permet encore de
+    Choisir le plus grand chiffre disponible qui permet encore de
     sélectionner k batteries au total.
     """
     n = len(line)
