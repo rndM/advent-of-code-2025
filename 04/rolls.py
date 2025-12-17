@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def accessible_rolls_count(grid):
+def rolls_counter(grid):
     """
     Compte les rouleaux '@' accessibles par un chariot élévateur.
     Un rouleau est accessible s'il a moins de 4 autres rouleaux dans les 8
@@ -23,7 +23,7 @@ def accessible_rolls_count(grid):
             if current != '@':
                 continue
 
-            rouleaux_autour = 0
+            rolls_arround = 0
 
             for delta_l, delta_r in directions:
                 next_l = line + delta_l
@@ -31,9 +31,9 @@ def accessible_rolls_count(grid):
 
                 if (0 <= next_l < nb_lines and 0 <= next_r < nb_rows):
                     if grid[next_l][next_r] == '@':
-                        rouleaux_autour += 1
+                        rolls_arround += 1
 
-            if rouleaux_autour < 4:
+            if rolls_arround < 4:
                 total += 1
 
     return total
@@ -46,7 +46,7 @@ def main():
 
     grid = [list(line) for line in lines]
 
-    resultat = accessible_rolls_count(grid)
+    resultat = rolls_counter(grid)
 
     print(f"Rouleaux accessibles : {resultat}")
 
