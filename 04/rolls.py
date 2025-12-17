@@ -25,9 +25,9 @@ def rolls_counter(grid):
 
             rolls_arround = 0
 
-            for delta_l, delta_r in directions:
-                next_l = line + delta_l
-                next_r = rows + delta_r
+            for delta in directions:
+                next_l = line + delta[0]
+                next_r = rows + delta[1]
 
                 if (0 <= next_l < nb_lines and 0 <= next_r < nb_rows):
                     if grid[next_l][next_r] == '@':
