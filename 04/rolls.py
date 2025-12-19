@@ -7,9 +7,9 @@ def find_accessible_rolls(grid):
     accessible = []
 
     directions = [
-        (-1, -1), (-1, 0), (-1, 1),  # haut-gauche, haut, haut-droit
-        (0, -1),          (0, 1),    # gauche, droite
-        (1, -1), (1, 0), (1, 1)      # bas-gauche, bas, bas-droit
+        (-1, -1), (-1, 0), (-1, 1),  # upper-left, up, upper-right
+        (0, -1),          (0, 1),    # left, write
+        (1, -1), (1, 0), (1, 1)      # lower-left, down, lower-right
     ]
 
     for line in range(nb_lines):
