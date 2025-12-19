@@ -7,12 +7,7 @@ def parse_input(filename):
     # Separer les ranges des IDs
     parts = content.split('\n\n')
     ranges_text = parts[0]
-
-    # if len(parts) > 1:
-    #     ids_text = parts[1]
-    # else:
-    #     ids_text = ""
-    ids_text = parts[1] if len(parts) > 1 else ""
+    ids_text = parts[1]
 
     # stocker les ranges dans une liste de tuples
     fresh_ranges = []
@@ -22,9 +17,8 @@ def parse_input(filename):
 
     # stocker tout les Ids dans une liste de int
     available_ids = []
-    if ids_text:
-        for line in ids_text.strip().split('\n'):
-            available_ids.append(int(line))
+    for line in ids_text.strip().split('\n'):
+        available_ids.append(int(line))
 
     return fresh_ranges, available_ids
 
@@ -32,6 +26,7 @@ def parse_input(filename):
 def solve_part1(fresh_ranges, available_ids):
     # Est-ce que chaque ID tombe dans au moins un des intervalles ?
     fresh_count = 0
+
     for ingredient_id in available_ids:
         is_fresh = False
         for start, end in fresh_ranges:
@@ -40,6 +35,7 @@ def solve_part1(fresh_ranges, available_ids):
                 break  # Pas besoin de verifier les autres plages, il est frais
         if is_fresh:
             fresh_count += 1
+
     return fresh_count
 
 
