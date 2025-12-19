@@ -8,7 +8,7 @@ def find_accessible_rolls(grid):
 
     directions = [
         (-1, -1), (-1, 0), (-1, 1),  # upper-left, up, upper-right
-        (0, -1),          (0, 1),    # left, write
+        (0, -1),          (0, 1),    # left, right
         (1, -1), (1, 0), (1, 1)      # lower-left, down, lower-right
     ]
 
