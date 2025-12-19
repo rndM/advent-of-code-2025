@@ -1,5 +1,7 @@
 # Advent of Code 2025 – École 42 Marseille
 
+[🇬🇧 English version below](#english-version)
+
 Ce dépôt contient mes solutions aux problèmes de l'[Advent of Code 2025](https://adventofcode.com/2025), réalisées dans le cadre de ma formation à l'École 42 Marseille.
 
 ## Structure du dépôt
@@ -56,6 +58,10 @@ Chaque jour contient :
 *Ce projet est maintenu dans le cadre de ma formation à l'École 42. Les énoncés et données d'input appartiennent à Advent of Code.*
 
 ---
+
+## English Version
+
+[🇫🇷 Version française ci-dessus](#advent-of-code-2025--école-42-marseille)
 
 # Advent of Code 2025 – École 42 Marseille
 
