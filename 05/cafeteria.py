@@ -15,7 +15,7 @@ def parse_input(filename):
         start, end = map(int, line.split('-'))
         fresh_ranges.append((start, end))
 
-    # stocker les Ids dans une liste de int
+    # stocker tout les Ids dans une liste de int
     available_ids = []
     if ids_text:
         for line in ids_text.strip().split('\n'):
