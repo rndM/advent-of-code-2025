@@ -5,6 +5,7 @@ def count_fresh_ingredients(filename):
     with open(filename, 'r') as f:
         content = f.read().strip()
 
+    # Separer les ranges des IDs
     parts = content.split('\n\n')
     ranges_text = parts[0]
     ids_text = parts[1]
@@ -36,7 +37,7 @@ def main():
     filename = 'input.txt'
 
     result = count_fresh_ingredients(filename)
-    print(result)
+    print("Part 1 :", result)
 
 
 if __name__ == "__main__":
