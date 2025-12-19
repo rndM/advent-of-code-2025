@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 def parse_input(filename):
+
     with open(filename, 'r') as f:
         content = f.read().strip()
 
@@ -24,7 +25,7 @@ def parse_input(filename):
 
 
 def solve_part1(fresh_ranges, available_ids):
-    # Est-ce que chaque ID tombe dans au moins un des intervalles ?
+
     fresh_count = 0
 
     for ingredient_id in available_ids:
@@ -32,7 +33,7 @@ def solve_part1(fresh_ranges, available_ids):
         for start, end in fresh_ranges:
             if start <= ingredient_id <= end:
                 is_fresh = True
-                break  # Pas besoin de verifier les autres plages, il est frais
+                break
         if is_fresh:
             fresh_count += 1
 
