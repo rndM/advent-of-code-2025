@@ -10,15 +10,18 @@ def count_fresh_ingredients(filename):
     ranges_text = parts[0]
     ids_text = parts[1]
 
+    # stocker les ranges dans une liste de tuples
     fresh_ranges = []
     for line in ranges_text.strip().split('\n'):
         start, end = map(int, line.split('-'))
         fresh_ranges.append((start, end))
 
+    # stocker les Ids dans une liste de int
     available_ids = []
     for line in ids_text.strip().split('\n'):
         available_ids.append(int(line))
 
+    # Est-ce que chaque ID tombe dans au moins un des intervalles ?
     fresh_count = 0
     for ingredient_id in available_ids:
         is_fresh = False
