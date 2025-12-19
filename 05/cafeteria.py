@@ -7,6 +7,11 @@ def parse_input(filename):
     # Separer les ranges des IDs
     parts = content.split('\n\n')
     ranges_text = parts[0]
+
+    # if len(parts) > 1:
+    #     ids_text = parts[1]
+    # else:
+    #     ids_text = ""
     ids_text = parts[1] if len(parts) > 1 else ""
 
     # stocker les ranges dans une liste de tuples
@@ -32,7 +37,7 @@ def solve_part1(fresh_ranges, available_ids):
         for start, end in fresh_ranges:
             if start <= ingredient_id <= end:
                 is_fresh = True
-                break
+                break  # Pas besoin de verifier les autres plages, il est frais
         if is_fresh:
             fresh_count += 1
     return fresh_count
