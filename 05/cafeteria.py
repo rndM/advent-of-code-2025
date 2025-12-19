@@ -29,7 +29,6 @@ def count_fresh_ingredients(filename):
             if start <= ingredient_id <= end:
                 is_fresh = True
                 break
-
         if is_fresh:
             fresh_count += 1
 
