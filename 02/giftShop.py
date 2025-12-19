@@ -48,9 +48,7 @@ def solve(part, ids):
 def main():
 
     with open('input.txt', 'r') as f:
-        file = f.read()
-
-    datas = file.split(',')
+        datas = f.read().strip().split(',')
 
     print(f"Pass 1: {solve(1, datas)}")
     print(f"Pass 2: {solve(2, datas)}")
