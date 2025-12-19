@@ -1,54 +1,80 @@
 #!/usr/bin/env python3
 
-def rolls_counter(grid):
-    """
-    Compte les rouleaux '@' accessibles par un chariot élévateur.
-    Un rouleau est accessible s'il a moins de 4 autres rouleaux dans les 8
-    cases qui l'entourent.
-    """
+def find_accessible_rolls(grid):
+
     nb_lines = len(grid)
     nb_rows = len(grid[0])
-    total = 0
+    accessible = []
 
     directions = [
         (-1, -1), (-1, 0), (-1, 1),  # haut-gauche, haut, haut-droit
-        (0, -1),           (0, 1),   # gauche, droite
-        (1, -1),  (1, 0),  (1, 1)    # bas-gauche, bas, bas-droit
+        (0, -1),          (0, 1),    # gauche, droite
+        (1, -1), (1, 0), (1, 1)      # bas-gauche, bas, bas-droit
     ]
 
     for line in range(nb_lines):
-        for rows in range(nb_rows):
-
-            current = grid[line][rows]
+        for row in range(nb_rows):
+            current = grid[line][row]
             if current != '@':
                 continue
 
-            rolls_arround = 0
+            rolls_around = 0
 
             for delta in directions:
                 next_l = line + delta[0]
-                next_r = rows + delta[1]
+                next_r = row + delta[1]
 
                 if (0 <= next_l < nb_lines and 0 <= next_r < nb_rows):
                     if grid[next_l][next_r] == '@':
-                        rolls_arround += 1
+                        rolls_around += 1
 
-            if rolls_arround < 4:
-                total += 1
+            if rolls_around < 4:
+                accessible.append((line, row))
 
-    return total
+    return accessible
+
+
+def part1(grid):
+
+    accessible = find_accessible_rolls(grid)
+    return len(accessible)
+
+
+def part2(grid):
+
+    grid_copy = [row[:] for row in grid]
+
+    total_removed = 0
+    iteration = 0
+
+    while True:
+        accessible = find_accessible_rolls(grid_copy)
+
+        if len(accessible) == 0:
+            break
+
+        iteration += 1
+        print(f"iteration {iteration}: {len(accessible)} rolls to remove")
+
+        for line, row in accessible:
+            grid_copy[line][row] = '.'
+
+        total_removed += len(accessible)
+
+    return total_removed
 
 
 def main():
-
     with open("input.txt", "r") as file:
         lines = [line for line in file]
 
     grid = [list(line) for line in lines]
 
-    resultat = rolls_counter(grid)
+    result_part1 = part1(grid)
+    print(f"Part 1 - accessible rolls : {result_part1}")
 
-    print(f"Rouleaux accessibles : {resultat}")
+    result_part2 = part2(grid)
+    print(f"Part 2 - removed rolls : {result_part2}")
 
 
 if __name__ == "__main__":
