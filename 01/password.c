@@ -80,8 +80,8 @@ int	main(void)
 	int	res2;
 
 	res1 = pass_1("./input.txt");
-	ft_printf("Pass 1  : %d\n", res1);
+	ft_printf("Part 1  : %d\n", res1);
 	res2 = pass_2("./input.txt");
-	ft_printf("Pass 2  : %d\n", res2);
+	ft_printf("Part 2  : %d\n", res2);
 	return (0);
 }

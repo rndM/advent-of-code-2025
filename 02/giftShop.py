@@ -50,8 +50,8 @@ def main():
     with open('input.txt', 'r') as f:
         datas = f.read().strip().split(',')
 
-    print(f"Pass 1: {solve(1, datas)}")
-    print(f"Pass 2: {solve(2, datas)}")
+    print(f"Part 1: {solve(1, datas)}")
+    print(f"Part 2: {solve(2, datas)}")
 
 
 if __name__ == "__main__":

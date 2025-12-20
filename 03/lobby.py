@@ -45,13 +45,13 @@ def main():
         max_joltage = max_joltage_k_batteries(line, 2)
         total_joltage_part1 += max_joltage
 
-    print(f"Part 1 - Total joltage: {total_joltage_part1}")
+    print(f"Part 1 : {total_joltage_part1}")
 
     for line in lines:
         max_joltage = max_joltage_k_batteries(line, 12)
         total_joltage_part2 += max_joltage
 
-    print(f"Part 2 - Total joltage: {total_joltage_part2}")
+    print(f"Part 2 : {total_joltage_part2}")
 
 
 if __name__ == "__main__":

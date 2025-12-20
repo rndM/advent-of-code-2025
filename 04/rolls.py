@@ -71,10 +71,10 @@ def main():
     grid = [list(line) for line in lines]
 
     result_part1 = part1(grid)
-    print(f"Part 1 - accessible rolls : {result_part1}")
+    print(f"Part 1 : {result_part1}")
 
     result_part2 = part2(grid)
-    print(f"Part 2 - removed rolls : {result_part2}")
+    print(f"Part 2 : {result_part2}")
 
 
 if __name__ == "__main__":
