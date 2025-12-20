@@ -27,7 +27,6 @@ def solve_part1(fresh_ranges, available_ids):
     """ Algo : force brute """
 
     # pour chaque ID, on vérifie s'il appartient à au moins un range
-    # Complexité : O(IDs x ranges)
     fresh_count = 0
 
     for ingredient_id in available_ids:
@@ -44,8 +43,7 @@ def solve_part1(fresh_ranges, available_ids):
 
 def solve_part2(fresh_ranges):
     """ Algo : interval merging.
-    fusionner les intervalles chevauchants et adjacents
-    Complexité : O(n log n) """
+    fusionner les intervalles chevauchants et adjacents """
 
     # Trier les ranges par début croissant
     sorted_ranges = sorted(fresh_ranges)
