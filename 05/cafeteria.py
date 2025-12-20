@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def parse_input(filename):
-    """Parse le fichier et extrait les intervalles et les IDs"""
+    """ Parse le fichier et extrait les intervalles et les IDs """
 
     with open(filename, 'r') as f:
         content = f.read().strip()
@@ -24,7 +24,7 @@ def parse_input(filename):
 
 
 def solve_part1(fresh_ranges, available_ids):
-    """Algo : force brute """
+    """ Algo : force brute """
 
     # pour chaque ID, on vérifie s'il appartient à au moins un range
     # Complexité : O(IDs x ranges)
@@ -43,8 +43,9 @@ def solve_part1(fresh_ranges, available_ids):
 
 
 def solve_part2(fresh_ranges):
-    """ Algo : Fusion linéaire (interval merging).
-    fusionner les intervalles chevauchants et adjacents ( O(n log n) ? )"""
+    """ Algo : interval merging.
+    fusionner les intervalles chevauchants et adjacents
+    Complexité : O(n log n) """
 
     # Trier les ranges par début croissant
     sorted_ranges = sorted(fresh_ranges)
