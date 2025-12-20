@@ -26,7 +26,7 @@ def parse_input(filename):
 def solve_part1(fresh_ranges, available_ids):
     """ Algo : force brute """
 
-    # pour chaque ID, on vérifie s'il appartient à au moins un range
+    # pour chaque ID, on vérifie s'il appartient à au moins un intervalle
     fresh_count = 0
 
     for ingredient_id in available_ids:
@@ -42,7 +42,7 @@ def solve_part1(fresh_ranges, available_ids):
 
 
 def solve_part2(fresh_ranges):
-    """ Algo : interval merging.
+    """ Algo : interval merging
     fusionner les intervalles chevauchants et adjacents """
 
     # Trier les ranges par début croissant
