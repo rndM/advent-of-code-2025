@@ -44,9 +44,9 @@ def solve_part1(fresh_ranges, available_ids):
 
 def solve_part2(fresh_ranges):
     """ Algo : Fusion linéaire (interval merging).
-    fusionner les intervalles chevauchants et adjacents"""
+    fusionner les intervalles chevauchants et adjacents ( O(n log n) ? )"""
 
-    # Trier les ranges par début croissant  ( O(n log n) ? )
+    # Trier les ranges par début croissant
     sorted_ranges = sorted(fresh_ranges)
 
     merged = list()
