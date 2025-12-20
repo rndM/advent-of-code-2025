@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
 def parse_input(filename):
+    """Parse le fichier et extrait les intervalles et les IDs"""
 
     with open(filename, 'r') as f:
         content = f.read().strip()
 
     # Separer les ranges des IDs
-    parts = content.split('\n\n')
-    ranges_text = parts[0]
-    ids_text = parts[1]
+    ranges_text, ids_text = content.split('\n\n')
 
     # stocker tout les ranges dans une liste de tuples
     fresh_ranges = []
@@ -45,7 +44,7 @@ def solve_part1(fresh_ranges, available_ids):
 
 def solve_part2(fresh_ranges):
     """ Algo : Fusion linéaire (interval merging).
-    fusionner les intervalles chevauchants et adjacents """
+    fusionner les intervalles chevauchants et adjacents"""
 
     # Trier les ranges par début croissant  ( O(n log n) ? )
     sorted_ranges = sorted(fresh_ranges)
