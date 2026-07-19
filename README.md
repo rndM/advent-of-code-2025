@@ -1,5 +1,13 @@
 # Advent of Code 2025 – École 42 Marseille
 
+---
+
+## 📚 Navigation
+
+**[English Version](README.md)** | **[Version Française](README_FR.md)**
+
+---
+
 This repository contains my solutions to the [Advent of Code 2025](https://adventofcode.com/2025) problems, completed as part of my training at École 42 Marseille.
 
 ## Repository Structure

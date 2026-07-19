@@ -1,6 +1,12 @@
 # Advent of Code 2025 – École 42 Marseille
 
-[🇬🇧 English version below](#english-version)
+---
+
+## 📚 Navigation
+
+**[English Version](README.md)** | **[Version Française](README_FR.md)**
+
+---
 
 Ce dépôt contient mes solutions aux problèmes de l'[Advent of Code 2025](https://adventofcode.com/2025), réalisées dans le cadre de ma formation à l'École 42 Marseille.
 
