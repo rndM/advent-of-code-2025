@@ -8,6 +8,8 @@
 
 ---
 
+![C](https://img.shields.io/badge/C-99-blue) ![Python](https://img.shields.io/badge/Python-3.x-blue) ![Year](https://img.shields.io/badge/Year-2025-orange) ![License](https://img.shields.io/badge/License-MIT-green)
+
 This repository contains my solutions to the [Advent of Code 2025](https://adventofcode.com/2025) problems, completed as part of my training at École 42 Marseille.
 
 ## Repository Structure

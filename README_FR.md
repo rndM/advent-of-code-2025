@@ -8,6 +8,8 @@
 
 ---
 
+![C](https://img.shields.io/badge/C-99-blue) ![Python](https://img.shields.io/badge/Python-3.x-blue) ![Année](https://img.shields.io/badge/Ann%C3%A9e-2025-orange) ![Licence](https://img.shields.io/badge/Licence-MIT-green)
+
 Ce dépôt contient mes solutions aux problèmes de l'[Advent of Code 2025](https://adventofcode.com/2025), réalisées dans le cadre de ma formation à l'École 42 Marseille.
 
 ## Structure du dépôt
